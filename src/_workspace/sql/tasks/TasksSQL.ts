@@ -118,6 +118,8 @@ export const TasksSQL = {
       sql += `, DUE_DATE = ${dataItem.DUE_DATE ? `'${dataItem.DUE_DATE}'` : "NULL"}`;
     if (dataItem.COMPLETED_DATE !== undefined)
       sql += `, COMPLETED_DATE = ${dataItem.COMPLETED_DATE ? `'${dataItem.COMPLETED_DATE}'` : "NULL"}`;
+    if (dataItem.TASK_URL !== undefined)
+      sql += `, TASK_URL = ${dataItem.TASK_URL ? `'${dataItem.TASK_URL.replace(/'/g, "''")}'` : "NULL"}`;
 
     sql += ` WHERE ID = ${dataItem.ID}`;
 

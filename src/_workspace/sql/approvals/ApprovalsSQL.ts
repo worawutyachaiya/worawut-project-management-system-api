@@ -11,6 +11,7 @@ export const ApprovalsSQL = {
         t.TITLE as TASK_TITLE,
         t.PRIORITY as TASK_PRIORITY,
         t.DUE_DATE,
+        t.TASK_URL,
         p.NAME as PROJECT_NAME,
         CONCAT(c.FIRST_NAME, ' ', c.LAST_NAME) as CREATED_BY_NAME
       FROM TASK_APPROVALS ta
